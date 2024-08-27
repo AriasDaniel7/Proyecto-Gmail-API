@@ -1,0 +1,23 @@
+@if(isLoading){
+<ngx-masonry [options]="myOptions" class="row" style="position: relative">
+  @for (gmail of gmails; track $index) {
+  <gmail-card
+    ngxMasonryItem
+    class="col-sm-6 col-lg-4 position-absolute"
+    [gmail]="gmail"
+  ></gmail-card>
+  }
+</ngx-masonry>
+}@else{
+<ngx-masonry [options]="myOptions" class="row" style="position: relative">
+  <gmail-card ngxMasonryItem class="col-sm-6 col-lg-4 position-absolute"></gmail-card>
+  <gmail-card ngxMasonryItem class="col-sm-6 col-lg-4 position-absolute"></gmail-card>
+  <gmail-card ngxMasonryItem class="col-sm-6 col-lg-4 position-absolute"></gmail-card>
+  <gmail-card ngxMasonryItem class="col-sm-6 col-lg-4 position-absolute"></gmail-card>
+  <gmail-card ngxMasonryItem class="col-sm-6 col-lg-4 position-absolute"></gmail-card>
+  <gmail-card ngxMasonryItem class="col-sm-6 col-lg-4 position-absolute"></gmail-card>
+  <gmail-card ngxMasonryItem class="col-sm-6 col-lg-4 position-absolute"></gmail-card>
+  <gmail-card ngxMasonryItem class="col-sm-6 col-lg-4 position-absolute"></gmail-card>
+  <gmail-card ngxMasonryItem class="col-sm-6 col-lg-4 position-absolute"></gmail-card>
+</ngx-masonry>
+}
