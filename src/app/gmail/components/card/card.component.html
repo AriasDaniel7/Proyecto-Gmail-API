@@ -1,0 +1,47 @@
+@if(gmail){
+<div class="card">
+  <div class="card-header">
+    <h2 class="card-title fs-4 text-center">{{ gmail.subject }}</h2>
+  </div>
+  <div class="card-body text-center">
+    <h3 class="card-subtitle mb-2 text-body-secondary fs-6 text-center">
+      {{ gmail.from }}
+    </h3>
+    <p class="badge text-bg-secondary">
+      {{ gmail.received | date : "short" }}
+    </p>
+    <p class="card-text text-start">{{ gmail.snippet }}</p>
+    <button
+      [routerLink]="['/gmail', gmail.id]"
+      class="btn btn-outline-success fw-bold w-100"
+    >
+      Ver más...
+    </button>
+  </div>
+</div>
+}@else {
+<div class="card">
+  <div class="card-header">
+    <h2 class="card-title fs-4 text-center placeholder-glow">
+      <span class="placeholder col-6"></span>
+    </h2>
+  </div>
+  <div class="card-body text-center">
+    <h3
+      class="card-subtitle mb-2 text-body-secondary fs-6 text-center placeholder-glow"
+    >
+      <span class="placeholder col-6"></span>
+    </h3>
+    <p class="placeholder-glow">
+      <span class="placeholder col-3"></span>
+    </p>
+    <p class="card-text text-start placeholder-glow">
+      <span class="placeholder col-7"></span>
+      <span class="placeholder col-4"></span>
+      <span class="placeholder col-4"></span>
+      <span class="placeholder col-6"></span>
+      <span class="placeholder col-8"></span>
+    </p>
+  </div>
+</div>
+}
